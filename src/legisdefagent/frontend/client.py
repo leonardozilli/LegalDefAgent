@@ -5,7 +5,7 @@ from typing import Any, Optional, cast
 
 import httpx
 
-from legaldefagent.core.schema import (
+from legisdefagent.core.schema import (
     AllModelEnum,
     ChatHistory,
     ChatHistoryInput,

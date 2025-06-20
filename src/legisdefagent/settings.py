@@ -6,7 +6,7 @@ from dotenv import find_dotenv, load_dotenv
 from pydantic import BaseModel, Field, SecretStr
 from pydantic_settings import BaseSettings, PydanticBaseSettingsSource
 
-from legaldefagent.core.schema.models import (
+from legisdefagent.core.schema.models import (
     AllModelEnum,
     AnthropicModelName,
     DeepSeekModelName,
@@ -18,7 +18,7 @@ from legaldefagent.core.schema.models import (
     TogetherModelName,
     VLLMModelName,
 )
-from legaldefagent.core.utils import get_available_vllm_models
+from legisdefagent.core.utils import get_available_vllm_models
 
 
 load_dotenv(find_dotenv(raise_error_if_not_found=True), override=False)

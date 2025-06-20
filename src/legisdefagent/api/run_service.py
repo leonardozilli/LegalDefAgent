@@ -1,7 +1,7 @@
 import typer
 import uvicorn
 
-from legaldefagent.settings import settings
+from legisdefagent.settings import settings
 
 
 def run_service(
@@ -10,7 +10,7 @@ def run_service(
     reload: bool = typer.Option(False, help="Enable auto-reload"),
 ):
     uvicorn.run(
-        "legaldefagent.api.service:app",
+        "legisdefagent.api.service:app",
         host=host or settings.api.host,
         port=port or settings.api.port,
         reload=reload,

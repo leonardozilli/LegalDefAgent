@@ -1,7 +1,7 @@
 [project]
-name = "LegalDefAgent"
+name = "legisdefagent"
 version = "1.0"
-description = "A legal definition retrieval and generation system."
+description = "An LLM-based system for Legislative Definitions Retrieval and Generation."
 authors = [{name = "Leonardo Zilli", email = "leonardo.zilli@studio.unibo.it"}]
 license = {text = "MIT"}
 requires-python = ">=3.12"
@@ -54,7 +54,7 @@ requires = ["uv_build"]
 build-backend = "uv_build"
 
 [project.scripts]
-legaldefagent = "legaldefagent.cli:app"
+legisdefagent = "legisdefagent.cli:app"
 
 [tool.ruff]
 line-length = 120

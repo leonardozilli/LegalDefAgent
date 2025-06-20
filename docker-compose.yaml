@@ -1,7 +1,7 @@
-name: legaldefagent
+name: legisdefagent
 services:
   api:
-    container_name: legaldefagent-api
+    container_name: legisdefagent-api
     build:
       context: .
       dockerfile: docker/Dockerfile.service
@@ -12,7 +12,7 @@ services:
     env_file:
       - .env
     networks:
-      - legaldefagent-network
+      - legisdefagent-network
     extra_hosts:
       - "host.docker.internal:host-gateway"
     healthcheck:
@@ -22,7 +22,7 @@ services:
       timeout: 60s
       retries: 10
   app:
-    container_name: legaldefagent-app
+    container_name: legisdefagent-app
     build:
       context: .
       dockerfile: docker/Dockerfile.app
@@ -36,10 +36,10 @@ services:
     env_file:
       - .env
     networks:
-      - legaldefagent-network
+      - legisdefagent-network
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
 networks:
-  legaldefagent-network:
+  legisdefagent-network:
     driver: bridge

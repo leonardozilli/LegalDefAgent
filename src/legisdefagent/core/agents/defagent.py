@@ -7,13 +7,13 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
 from langgraph.prebuilt import ToolNode
 
-from legaldefagent.core.agents.base import (
+from legisdefagent.core.agents.base import (
     AgentState,
     call_model,
     pending_tool_calls,
     state_cleanup,
 )
-from legaldefagent.core.tools.definition_search import definition_search
+from legisdefagent.core.tools.definition_search import definition_search
 
 logger = logging.getLogger(__name__)
 

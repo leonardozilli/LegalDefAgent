@@ -6,8 +6,8 @@ from pymilvus import Collection, WeightedRanker
 from pymilvus.model.hybrid import BGEM3EmbeddingFunction
 from torch.cuda import is_available as cuda_available
 
-from legaldefagent.settings import settings
-from legaldefagent.core.db.vectorstore.utils import connect_to_milvus
+from legisdefagent.settings import settings
+from legisdefagent.core.db.vectorstore.utils import connect_to_milvus
 
 
 class BGEMilvusDenseEmbeddings(Embeddings):

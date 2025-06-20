@@ -9,13 +9,13 @@ from langchain_core.runnables import RunnableConfig
 from langchain_core.tools.base import InjectedToolCallId
 from langgraph.prebuilt import InjectedState
 
-from legaldefagent.core import utils
-from legaldefagent.core.db.existdb import existdb_handler
-from legaldefagent.core.db.vectorstore import retriever as retriever_
-from legaldefagent.core.schema.definition import GeneratedDefinition, PickedDefinitions, RelevantDefinitionsIDList
-from legaldefagent.core.schema.task_data import Task
-from legaldefagent.core.providers import get_model
-from legaldefagent.settings import settings
+from legisdefagent.core import utils
+from legisdefagent.core.db.existdb import existdb_handler
+from legisdefagent.core.db.vectorstore import retriever as retriever_
+from legisdefagent.core.schema.definition import GeneratedDefinition, PickedDefinitions, RelevantDefinitionsIDList
+from legisdefagent.core.schema.task_data import Task
+from legisdefagent.core.providers import get_model
+from legisdefagent.settings import settings
 
 logger = logging.getLogger(__name__)
 

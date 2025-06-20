@@ -9,8 +9,8 @@ from langchain_core.runnables import RunnableConfig, RunnableLambda, RunnableSer
 from langgraph.graph import MessagesState
 from langgraph.managed import RemainingSteps
 
-from legaldefagent.core.providers import get_model
-from legaldefagent.settings import settings
+from legisdefagent.core.providers import get_model
+from legisdefagent.settings import settings
 
 
 logger = logging.getLogger(__name__)

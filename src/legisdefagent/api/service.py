@@ -16,9 +16,9 @@ from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 from langgraph.graph.state import CompiledStateGraph
 from langsmith import Client as LangsmithClient
 
-from legaldefagent.api.utils import convert_message_content_to_string, langchain_to_chat_message, remove_tool_calls
-from legaldefagent.core.agents import DEFAULT_AGENT, get_agent, get_all_agent_info
-from legaldefagent.core.schema import (
+from legisdefagent.api.utils import convert_message_content_to_string, langchain_to_chat_message, remove_tool_calls
+from legisdefagent.core.agents import DEFAULT_AGENT, get_agent, get_all_agent_info
+from legisdefagent.core.schema import (
     ChatHistory,
     ChatHistoryInput,
     ChatMessage,
@@ -30,7 +30,7 @@ from legaldefagent.core.schema import (
     AllModelEnum,
 )
 
-from legaldefagent.settings import settings
+from legisdefagent.settings import settings
 
 
 warnings.filterwarnings("ignore", category=LangChainBetaWarning)

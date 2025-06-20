@@ -13,7 +13,7 @@ from langchain_openai import ChatOpenAI
 from langchain_openai.chat_models.base import BaseChatOpenAI
 from langchain_together import ChatTogether
 
-from legaldefagent.core.schema.models import (
+from legisdefagent.core.schema.models import (
     AllModelEnum,
     AnthropicModelName,
     DeepSeekModelName,
@@ -26,7 +26,7 @@ from legaldefagent.core.schema.models import (
     TogetherModelName,
     VLLMModelName,
 )
-from legaldefagent.settings import settings
+from legisdefagent.settings import settings
 
 
 load_dotenv(find_dotenv())

@@ -11,8 +11,8 @@ import polars as pl
 import typer
 from tqdm import tqdm
 
-from legaldefagent.core.db.existdb import existdb_handler
-from legaldefagent.settings import settings
+from legisdefagent.core.db.existdb import existdb_handler
+from legisdefagent.settings import settings
 
 
 logger = logging.getLogger(__name__)

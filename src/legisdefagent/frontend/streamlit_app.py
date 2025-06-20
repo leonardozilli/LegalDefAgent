@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 from pydantic import ValidationError
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-from legaldefagent.core.schema.task_data import TaskData, TaskDataStatus
-from legaldefagent.frontend.client import AgentClient, ChatHistory, ChatMessage
-from legaldefagent.settings import settings
+from legisdefagent.core.schema.task_data import TaskData, TaskDataStatus
+from legisdefagent.frontend.client import AgentClient, ChatHistory, ChatMessage
+from legisdefagent.settings import settings
 
 
 logger = logging.getLogger(__name__)
@@ -159,7 +159,7 @@ async def main() -> None:
             help=f"Set URL query parameter ?thread_id={st.session_state.thread_id} to continue this conversation",
         )
 
-        "[Source code](https://github.com/leonardozilli/LegalDefAgent)"
+        "[Source code](https://github.com/leonardozilli/LegislativeDefinitionsAgent)"
         st.caption("CIRSFID-Alma AI")
 
     # Draw existing messages

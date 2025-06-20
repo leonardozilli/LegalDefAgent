@@ -1,3 +1,3 @@
-FROM legaldefagent-base:latest
+FROM legisdefagent-base:latest
 
-CMD ["python", "-m", "legaldefagent.cli", "run-app"]
+CMD ["python", "-m", "legisdefagent.cli", "run-app"]

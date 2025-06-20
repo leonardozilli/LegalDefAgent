@@ -3,12 +3,12 @@ from pathlib import Path
 
 import typer
 
-from legaldefagent.api.run_service import run_service
-from legaldefagent.ingestion.embed_definitions import embed_definitions
-from legaldefagent.ingestion.extract_definitions import extract_definitions
-from legaldefagent.ingestion.populate_vectorstore import populate_vectorstore
-from legaldefagent.settings import settings
-from legaldefagent.core.utils import setup_logging
+from legisdefagent.api.run_service import run_service
+from legisdefagent.ingestion.embed_definitions import embed_definitions
+from legisdefagent.ingestion.extract_definitions import extract_definitions
+from legisdefagent.ingestion.populate_vectorstore import populate_vectorstore
+from legisdefagent.settings import settings
+from legisdefagent.core.utils import setup_logging
 
 
 setup_logging()

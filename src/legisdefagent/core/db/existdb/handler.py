@@ -5,7 +5,7 @@ from typing import List
 
 from pyexistdb import db
 
-from legaldefagent.settings import Settings, settings
+from legisdefagent.settings import Settings, settings
 
 
 class ExistDBHandler:

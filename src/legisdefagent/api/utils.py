@@ -1,7 +1,7 @@
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, ToolMessage
 from langchain_core.messages import ChatMessage as LangchainChatMessage
 
-from legaldefagent.core.schema import ChatMessage
+from legisdefagent.core.schema import ChatMessage
 
 
 def convert_message_content_to_string(content: str | list[str | dict]) -> str:
