@@ -128,8 +128,8 @@ graph LR
 #### Local setup:
 
 ```bash
-git clone https://github.com/leonardozilli/LegalDefAgent
-cd LegalDefAgent
+git clone https://github.com/leonardozilli/LegislativeDefinitionsAgent
+cd LegislativeDefinitionsAgent
 uv sync
 source .venv/bin/activate
 cp .env-example .env
@@ -140,7 +140,7 @@ cp .env-example .env
 The system has a CLI for common operations. You can invoke it with:
 
 ```sh
-legaldefagent [COMMAND] <args>
+legisdefagent [COMMAND] <args>
 ```
 
 Available commands:
@@ -155,19 +155,19 @@ Example workflow:
 
 ```sh
 # 1. Extract definitions
-legaldefagent extract-definitions -s exist
+legisdefagent extract-definitions -s exist
 
 # 2. Compute embeddings
-legaldefagent embed-definitions -i data/definitions_corpus/definitions.csv
+legisdefagent embed-definitions -i data/definitions_corpus/definitions.csv
 
 # 3. Populate the vector store
-legaldefagent populate-vectorstore -d data/definitions_corpus/definitions.csv -e data/embeddings/defs_embeddings_hybrid.pkl
+legisdefagent populate-vectorstore -d data/definitions_corpus/definitions.csv -e data/embeddings/defs_embeddings_hybrid.pkl
 
 # 4. Start the FastAPI server
-legaldefagent run-service
+legisdefagent run-service
 
 # 5. Launch the Streamlit app
-legaldefagent run-app
+legisdefagent run-app
 ```
 
 The services will be available at:
@@ -179,7 +179,7 @@ To run with Docker Compose:
 
 ```bash
 # 1. Build the base image
-docker build -t legaldefagent-base:latest -f docker/Dockerfile.base .
+docker build -t legisdefagent-base:latest -f docker/Dockerfile.base .
 
 # 2. Start services
 docker-compose up --build
@@ -196,12 +196,12 @@ docker-compose up --build
 ├── docker/                         # Dockerfiles and container configurations
 ├── evaluation/                     # Evaluation utilities and artefacts
 ├── src/
-│   └── legaldefagent/          
+│   └── legisdefagent/          
 │       ├── api/                    # FastAPI service definitions
 │       ├── core/                   # Core logic and tool implementations
 │       │   ├── agents/             # LangGraph agent definitions
-│       │   ├── db/                 # Database interaction modules
-│       │   │   ├── existdb/        # XQuery handlers for eXist-db
+│       │   ├── db/                 # Database handlers and connectors
+│       │   │   ├── existdb/        # eXist-db integration
 │       │   │   └── vectorstore/    # MilvusDB integration
 │       │   ├── schema/             # Data schemas and models
 │       │   ├── tools/              # Agent Retrieval tools
@@ -211,7 +211,8 @@ docker-compose up --build
 │       ├── cli.py                  # CLI entry point
 │       ├── settings.py             # Configuration management
 │       └── utils.py                # Utility functions
-├── pyproject.toml                  # Project dependencies and metadata
+├── tests/                          # Test suite
 ├── config.yaml                     # System configuration
-└── README.md                       # This file
+├── pyproject.toml                  # Project dependencies
+└── README.md
 ```
